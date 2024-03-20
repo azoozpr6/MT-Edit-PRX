@@ -1807,6 +1807,7 @@ var requiredItemOpen = false;
         $("#info-apartment").html(data.apartment);
         $("#info-gang").html(data.gang);
         $("#info-job").html(data.job);
+        $("#info-garde").html(data.garde);
         $("#info-firstname").html(data.firstname);
         $("#info-lastname").html(data.lastname);
         $(".ply-iteminfo-container").css("display", "none");
@@ -2100,8 +2101,8 @@ var requiredItemOpen = false;
                 var elem = '<div class="item-slot" data-zhotbarslot="' + i + '"> <div class="item-slot-key"><p>' + i + '</p></div><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>';
                 $(".z-hotbar-inventory").append(elem);
             }
-            var elem = '<div class="item-slot" data-zhotbarslot="41"> <div class="item-slot-key"><p>6</p></div><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>';
-            $(".z-hotbar-inventory").append(elem);
+            // var elem = '<div class="item-slot" data-zhotbarslot="41"> <div class="item-slot-key"><p>6</p></div><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>';
+            // $(".z-hotbar-inventory").append(elem);
             $.each(data.items, function (i, item) {
                 if (item != null) {
                     var ItemLabel = '<div class="item-slot-label"><p>' + item.label + "</p></div>";

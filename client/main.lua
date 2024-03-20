@@ -198,7 +198,7 @@ local function ToggleHotbar(toggle)
         [3] = PlayerData.items[3],
         [4] = PlayerData.items[4],
         [5] = PlayerData.items[5],
-        [41] = PlayerData.items[41],
+        [6] = PlayerData.items[41],
     }
 
     if toggle then
@@ -492,6 +492,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
             firstname = PlayerData.charinfo.firstname,
             lastname = PlayerData.charinfo.lastname,
             bank = PlayerData.money["bank"],
+            garde = PlayerData.job.grade.name,
             maxweight = Config.MaxInventoryWeight,
             Ammo = PlayerAmmo,
             maxammo = Config.MaximumAmmoValues,
