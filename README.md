@@ -73,6 +73,7 @@ exports['qb-inventory']:SetInventory(source, items)
 
 # Inventory Decay
 
+![image](https://cdn.discordapp.com/attachments/1203452145580376064/1220114016865747034/image.png?ex=660dc2ba&is=65fb4dba&hm=f648e4009ec0372f2a1a6d4e618ba80789255dfaf8c84734a76f55e1be1a1778&)
 
 ## Credits:
 >### aj - aj-inventory
