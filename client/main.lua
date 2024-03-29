@@ -494,6 +494,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
             bank = PlayerData.money["bank"],
             garde = PlayerData.job.grade.name,
             maxweight = Config.MaxInventoryWeight,
+            numberplayer = PlayerData.charinfo.phone,
             Ammo = PlayerAmmo,
             maxammo = Config.MaximumAmmoValues,
         })

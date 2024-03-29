@@ -18,9 +18,9 @@ font-face {
     --background-color: #c0c0c0;
     --font-size: 1.2vh;
     --hover-color: #bdbdbd;
-    --main: rgb(252, 114, 2);
-    --dark: rgb(254, 46, 2);
-    --light: rgb(252, 160, 2);
+    --main: #000099;
+    --dark: #0000ff;
+    --light: #0000ff;
     --black: rgb(4,4,4);
     --shadow: rgba(4,4,4, 0.460);
     --white: rgb(244,244,244);
@@ -46,7 +46,7 @@ font-face {
 
   }
   ::selection {
-    background-color: rgba(229, 99, 12, 0.9)!important;
+    background-color: #0b0bd9c2!important;
   }
   
 body {
@@ -98,7 +98,7 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to top, rgb(48 21 3 / 90%), rgba(22, 24, 29, 0.96));
+  background-image: linear-gradient(to top, rgba(3, 3, 48, 0.9), rgba(22, 24, 29, 0.96));
   z-index: -1;
 }
 
@@ -173,8 +173,8 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(228, 99, 12, 0.15);
-    color: #E4630C;
+    background-color: #0000cc79;
+    color: #0000cc;
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -184,7 +184,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .box-brighter-background {
-    background-color: rgba(228, 99, 12, 0.3);
+    background-color: #0000cc79;
 }
 
 .main-inventory-boxes:hover {
@@ -263,7 +263,7 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     justify-content: center;
     margin-right: 25px;
-    color: #E4630C;
+    color: #0000cc;
 }
 
 .icon > i {
@@ -274,7 +274,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .icon::before {
    content: '';
-   background-image: linear-gradient(128deg, rgba(228, 99, 12, 0.5), 35%, rgba(255, 0, 0, 0) 100%);
+   background-image: linear-gradient(128deg, rgba(12, 19, 228, 0.5), 35%, rgba(255, 0, 0, 0) 100%);
    width: 35px;
    height: 35px;
    transform: rotate(45deg);
@@ -285,7 +285,7 @@ input[type="number"]::-webkit-outer-spin-button {
    position: absolute;
    top: 7px;
    left: 0;
-   background-image: linear-gradient(128deg, rgba(228, 99, 12, 0.2), 35%, rgba(255, 0, 0, 0) 100%);
+   background-image: linear-gradient(128deg, rgba(12, 19, 228, 0.2), 35%, rgba(255, 0, 0, 0) 100%);
    width: 35px;
    height: 35px;
    transform: rotate(45deg);
@@ -302,8 +302,8 @@ input[type="number"]::-webkit-outer-spin-button {
     /* background-color: rgba(0,0,0,0.5); */
     background: radial-gradient(
         circle,
-        rgba(229, 99, 12, 0.05) 10%,
-        rgba(229, 99, 12, 0.1) 85%
+        rgba(12, 19, 228, 0.05) 10%,
+        rgba(12, 19, 228, 0.1) 85%
     );
 }
 
@@ -339,8 +339,8 @@ input[type="number"]::-webkit-outer-spin-button {
     transition: width 0.2s;
     background: radial-gradient(
         circle,
-        rgba(229, 99, 12, 0.05) 10%,
-        rgba(229, 99, 12, 0.1) 85%
+        rgba(12, 19, 228, 0.05) 10%,
+        rgba(12, 19, 228, 0.1) 85%
     );
 }
 
@@ -362,11 +362,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .ui-progressbar .ui-progressbar-value {
-    background-color: rgba(229, 99, 12, 0.9);
+    background-color: rgba(12, 19, 228, 0.9);
 }
 
 .ui-progressbar-medium .ui-progressbar-value {
-    background-color: rgba(229, 99, 12, 0.9);
+    background-color: rgba(12, 19, 228, 0.9);
 }
 
 .ui-progressbar-high .ui-progressbar-value {
@@ -446,8 +446,8 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     min-height: 2.3vh;
     height: fit-content;
-    border-bottom: 2px solid rgb(252, 114, 2);
-    box-shadow: 1px 13px 44px -7px rgba(229,99,12,0.14);
+    border-bottom: 2px solid #000099;
+    box-shadow: 1px 13px 44px -7px rgba(12, 19, 228,0.14);
 
 }
 
@@ -468,13 +468,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .player-icon {
     width: 16px;
     height: 16px;
-    background: rgba(228, 99, 12, 0.8);
+    background: rgba(12, 19, 228, 0.8);
     align-self: center;
     position: relative;
     top: -.5vh;
     left: -.5vh;
     border-radius: 50%;
-    box-shadow: 0 0 15px #E4630C;
+    box-shadow: 0 0 15px #0000cc;
 }
 
 .inprogress {
@@ -483,16 +483,16 @@ input[type="number"]::-webkit-outer-spin-button {
     
 @keyframes glow {
     from {
-        box-shadow: 0 0 15px -4px #E4630C;
+        box-shadow: 0 0 15px -4px #0000cc;
     }
     to {
-        box-shadow: 0 0 15px 3px #E4630C;
+        box-shadow: 0 0 15px 3px #0000cc;
     }
 }
 .information-col{
     display: flex;
     width: 16.5rem;
-    box-shadow: 1px 13px 44px -7px rgba(229,99,12,0.14);
+    box-shadow: 1px 13px 44px -7px rgba(12, 19, 228,0.14);
     gap: 10px;
 }
 .information-row{
@@ -525,8 +525,8 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     align-self: flex-start;
-    border-bottom: 2px solid rgb(252, 114, 2);
-    box-shadow: 1px 13px 44px -7px rgba(229,99,12,0.14);
+    border-bottom: 2px solid #000099;
+    box-shadow: 1px 13px 44px -7px rgba(12, 19, 228,0.14);
 }
 
 .fz {
@@ -559,7 +559,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .item-slot:hover{
-    background: linear-gradient(128deg, rgba(228, 99, 12, 0.2), 35%, rgba(255, 0, 0, 0) 100%);
+    background: linear-gradient(128deg, rgba(12, 19, 228, 0.2), 35%, rgba(255, 0, 0, 0) 100%);
 }
 
 .item-slot-img {
@@ -586,7 +586,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: rgba(252, 114, 2, .5);
+    color: rgba(12, 19, 228, .5);
     z-index: -1;
 }
 
@@ -638,15 +638,15 @@ input[type="number"]::-webkit-outer-spin-button {
     bottom: 0;
     width: 100%;
     height: 4px;
-    background-color: rgba(228, 99, 12, 0.15);
+    background-color: rgba(12, 19, 228, 0.15);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
 
 .item-slot-quality-bar {
     height: 4px;
     height: 100%;
-    background-color: #E4630C;
-    box-shadow: 0 0 5px #E4630C;
+    background-color: #0000cc;
+    box-shadow: 0 0 5px #0000cc;
 }
 .item-slot-quality-bar p {
     display: none;
@@ -753,7 +753,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 .item-split-action:hover{
-    background:rgba(229,99,12, 1);
+    background:rgba(12, 19, 228, 1);
     cursor: pointer;
     transition: 0.5s all;
 }
@@ -766,8 +766,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .ui-state-active{
-  background: rgba(229,99,12, 1)!important;
-  border: 1px solid rgba(229,99,12, 1)!important;
+  background: rgba(12, 19, 228, 1)!important;
+  border: 1px solid rgba(12, 19, 228, 1)!important;
 }
 .item-split-range{  
     width: 100%!important;
@@ -783,8 +783,8 @@ input[type="number"]::-webkit-outer-spin-button {
     position: absolute;
     margin: -6px 0 0 -17px;
     border-radius: 50%!important;
-    background: rgba(229,99,12, 1)!important;
-    color: rgba(229,99,12, 1)!important;
+    background: rgba(12, 19, 228, 1)!important;
+    color: rgba(12, 19, 228, 1)!important;
     border: 0;
     height: 20px;
     line-height: 20px;
@@ -801,25 +801,25 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: scale(1.1)!important;
 }
 .ui-slider-range{
-    background: rgba(229,99,12, 1)!important;
+    background: rgba(12, 19, 228, 1)!important;
 }
 /* .item-split-range .ui-slider-handle {
   outline: 0;
-  background: rgba(229, 99, 12, 0.9)!important;;
+  background: rgba(12, 19, 228, 0.9)!important;;
   border-radius: 50%;
   top: -.6em;
 }
 .item-split-range .ui-slider-handle:hover, .item-split-range .ui-slider-handle:focus{
-    border: 1px solid rgba(229, 99, 12, 0.7);
+    border: 1px solid rgba(12, 19, 228, 0.7);
 
 }
 .item-split-range .ui-slider-range{
-    background: rgba(229, 99, 12, 0.7)!important;
+    background: rgba(12, 19, 228, 0.7)!important;
 
 } */
 
 .highlight {
-    background: rgba(229, 99, 12, 0.7);
+    background: rgba(12, 19, 228, 0.7);
     height: 100%;
     width: 0;
   }
@@ -877,7 +877,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .item-shit-option:hover{
     cursor: pointer;
-    background-color: rgba(228, 99, 12, 0.3);
+    background-color: rgba(12, 19, 228, 0.3);
 }
 .iteminfo-content {
     z-index: 99999999999999999999999;
@@ -904,7 +904,7 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
     top: .5vh;
     height: fit-content;
-    background-color: #493E39;
+    background-color: #393d49;
     font-weight: 500;
     border-radius: 5px;
     padding-bottom: 1.3vh;
@@ -912,7 +912,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .item-uselessinfo > div {
     position: relative;
-    background-color: rgba(228, 99, 12, 0.2);
+    background-color: rgba(12, 19, 228, 0.2);
     width: fit-content;
     display: flex;
     justify-content: center;
@@ -1089,7 +1089,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 40px;
     background: rgb(44,44,44);
     transform: rotate(45deg);
-    box-shadow: 0 0 15px #E4630C;
+    box-shadow: 0 0 15px #0000cc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1137,7 +1137,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .itemBox-meow-boxes-meow {
     background: rgb(44,44,44);
     padding: 0 1vh;
-    color: rgba(252, 114, 2, .7);
+    color: rgba(12, 19, 228, .7);
     display: flex;
     justify-content: center;
     align-items: center;
