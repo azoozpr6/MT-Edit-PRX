@@ -436,7 +436,7 @@ function FormatAttachmentInfo(data) {
 
             $(".weapon-attachments-container-title").html(data.WeaponData.label + " | " + AmmoLabel);
             $(".weapon-attachments-container-description").html(data.WeaponData.description);
-            $(".weapon-attachments-container-details").html('<span style="font-weight: bold; letter-spacing: .1vh;">Serial Number</span><br> ' + ClickedItemData.info.serie + '<br><br><span style="font-weight: bold; letter-spacing: .1vh;">Durability - ' + Durability.toFixed() + '% </span> <div class="weapon-attachments-container-detail-durability"><div class="weapon-attachments-container-detail-durability-total"></div></div>');
+            $(".weapon-attachments-container-details").html('<span style="font-weight: bold; letter-spacing: .1vh;">Name</span><br> ' + ClickedItemData.info.serie + '<br><br><span style="font-weight: bold; letter-spacing: .1vh;">Durability - ' + Durability.toFixed() + '% </span> <div class="weapon-attachments-container-detail-durability"><div class="weapon-attachments-container-detail-durability-total"></div></div>');
             $(".weapon-attachments-container-detail-durability-total").css({
                 width: Durability + "%",
             });
@@ -570,7 +570,7 @@ function setItemInfo(title, description) {
 function generateDescription(itemData) {
     if (itemData.type === "weapon") {
         let ammo = itemData.info.ammo ?? 0;
-        return `<p><strong>Serial Number: </strong><span>${itemData.info.serie}</span></p>
+        return `<p><strong>Name : </strong><span>${itemData.info.serie}</span></p>
                     <p><strong>Ammunition: </strong><span>${ammo}</span></p>
                     <p>${itemData.description}</p>`;
     }
@@ -621,7 +621,7 @@ function generateDescription(itemData) {
                 return `<p><strong>Evidence material: </strong><span>${itemData.info.label}</span></p>
                 <p><strong>Type number: </strong><span>${itemData.info.ammotype}</span></p>
                 <p><strong>Caliber: </strong><span>${itemData.info.ammolabel}</span></p>
-                <p><strong>Serial Number: </strong><span>${itemData.info.serie}</span></p>
+                <p><strong>Name: </strong><span>${itemData.info.serie}</span></p>
                 <p><strong>Crime scene: </strong><span>${itemData.info.street}</span></p><br /><p>${itemData.description}</p>`;
             } else if (itemData.info.type == "blood") {
                 return `<p><strong>Evidence material: </strong><span>${itemData.info.label}</span></p>
