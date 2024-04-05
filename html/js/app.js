@@ -628,11 +628,17 @@ function generateDescription(itemData) {
                 <p><strong>Blood type: </strong><span>${itemData.info.bloodtype}</span></p>
                 <p><strong>DNA Code: </strong><span>${itemData.info.dnalabel}</span></p>
                 <p><strong>Crime scene: </strong><span>${itemData.info.street}</span></p><br /><p>${itemData.description}</p>`;
-            } else if (itemData.info.type == "fingerprint") {
+            }
+             else if (itemData.name == "key1") {
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");
+            $(".item-info-description").html("<p>Room Number: #" + itemData.info.roomnumber + "</p>");
+             }
+            else if (itemData.info.type == "fingerprint") {
                 return `<p><strong>Evidence material: </strong><span>${itemData.info.label}</span></p>
                 <p><strong>Fingerprint: </strong><span>${itemData.info.fingerprint}</span></p>
                 <p><strong>Crime Scene: </strong><span>${itemData.info.street}</span></p><br /><p>${itemData.description}</p>`;
-            } else if (itemData.info.type == "dna") {
+            }    
+             else if (itemData.info.type == "dna") {
                 return `<p><strong>Evidence material: </strong><span>${itemData.info.label}</span></p>
                 <p><strong>DNA Code: </strong><span>${itemData.info.dnalabel}</span></p><br /><p>${itemData.description}</p>`;
             }
@@ -1116,13 +1122,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                         if (newData.info.quality == undefined) {
                             newData.info.quality = 100.0;
                         }
-                        var QualityColor = "rgb(12, 19, 228)";
+                        var QualityColor = "rgb(127,82,0)";
                         if (newData.info.quality < 25) {
                             QualityColor = "rgb(192, 57, 43)";
                         } else if (newData.info.quality > 25 && newData.info.quality < 50) {
-                            QualityColor = "rgb(12, 19, 228)";
+                            QualityColor = "rgb(127,82,0)";
                         } else if (newData.info.quality >= 50) {
-                            QualityColor = "rgb(12, 19, 228)";
+                            QualityColor = "rgb(127,82,0)";
                         }
                         if (newData.info.quality !== undefined) {
                             qualityLabel = newData.info.quality.toFixed();
@@ -1189,13 +1195,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                         if (newData.info.quality == undefined) {
                             newData.info.quality = 100.0;
                         }
-                        var QualityColor = "rgb(12, 19, 228)";
+                        var QualityColor = "rgb(127,82,0)";
                         if (newData.info.quality < 25) {
                             QualityColor = "rgb(192, 57, 43)";
                         } else if (newData.info.quality > 25 && newData.info.quality < 50) {
                             QualityColor = "rgb(230, 126, 34)";
                         } else if (newData.info.quality >= 50) {
-                            QualityColor = "rgb(12, 19, 228)";
+                            QualityColor = "rgb(127,82,0)";
                         }
                         if (newData.info.quality !== undefined) {
                             qualityLabel = newData.info.quality.toFixed();
@@ -1245,13 +1251,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                             if (newDataFrom.info.quality == undefined) {
                                 newDataFrom.info.quality = 100.0;
                             }
-                            var QualityColor = "rgb(12, 19, 228)";
+                            var QualityColor = "rgb(127,82,0)";
                             if (newDataFrom.info.quality < 25) {
                                 QualityColor = "rgb(192, 57, 43)";
                             } else if (newDataFrom.info.quality > 25 && newDataFrom.info.quality < 50) {
                                 QualityColor = "rgb(230, 126, 34)";
                             } else if (newDataFrom.info.quality >= 50) {
-                                QualityColor = "rgb(12, 19, 228)";
+                                QualityColor = "rgb(127,82,0)";
                             }
                             if (newDataFrom.info.quality !== undefined) {
                                 qualityLabel = newDataFrom.info.quality.toFixed();
@@ -1337,13 +1343,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                         if (fromData.info.quality == undefined) {
                             fromData.info.quality = 100.0;
                         }
-                        var QualityColor = "rgb(12, 19, 228)";
+                        var QualityColor = "rgb(127,82,0)";
                         if (fromData.info.quality < 25) {
                             QualityColor = "rgb(192, 57, 43)";
                         } else if (fromData.info.quality > 25 && fromData.info.quality < 50) {
                             QualityColor = "rgb(230, 126, 34)";
                         } else if (fromData.info.quality >= 50) {
-                            QualityColor = "rgb(12, 19, 228)";
+                            QualityColor = "rgb(127,82,0)";
                         }
                         if (fromData.info.quality !== undefined) {
                             qualityLabel = fromData.info.quality.toFixed();
@@ -1393,13 +1399,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                             if (toData.info.quality == undefined) {
                                 toData.info.quality = 100.0;
                             }
-                            var QualityColor = "rgb(12, 19, 228)";
+                            var QualityColor = "rgb(127,82,0)";
                             if (toData.info.quality < 25) {
                                 QualityColor = "rgb(192, 57, 43)";
                             } else if (toData.info.quality > 25 && toData.info.quality < 50) {
                                 QualityColor = "rgb(230, 126, 34)";
                             } else if (toData.info.quality >= 50) {
-                                QualityColor = "rgb(12, 19, 228)";
+                                QualityColor = "rgb(127,82,0)";
                             }
                             if (toData.info.quality !== undefined) {
                                 qualityLabel = toData.info.quality.toFixed();
@@ -1494,13 +1500,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                         if (newDataTo.info.quality == undefined) {
                             newDataTo.info.quality = 100.0;
                         }
-                        var QualityColor = "rgb(12, 19, 228)";
+                        var QualityColor = "rgb(127,82,0)";
                         if (newDataTo.info.quality < 25) {
                             QualityColor = "rgb(192, 57, 43)";
                         } else if (newDataTo.info.quality > 25 && newDataTo.info.quality < 50) {
                             QualityColor = "rgb(230, 126, 34)";
                         } else if (newDataTo.info.quality >= 50) {
-                            QualityColor = "rgb(12, 19, 228)";
+                            QualityColor = "rgb(127,82,0)";
                         }
                         if (newDataTo.info.quality !== undefined) {
                             qualityLabel = newDataTo.info.quality.toFixed();
@@ -1559,13 +1565,13 @@ function swap($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
                             if (newDataFrom.info.quality == undefined) {
                                 newDataFrom.info.quality = 100.0;
                             }
-                            var QualityColor = "rgb(12, 19, 228)";
+                            var QualityColor = "rgb(127,82,0)";
                             if (newDataFrom.info.quality < 25) {
                                 QualityColor = "rgb(192, 57, 43)";
                             } else if (newDataFrom.info.quality > 25 && newDataFrom.info.quality < 50) {
                                 QualityColor = "rgb(230, 126, 34)";
                             } else if (newDataFrom.info.quality >= 50) {
-                                QualityColor = "rgb(12, 19, 228)";
+                                QualityColor = "rgb(127,82,0)";
                             }
                             if (newDataFrom.info.quality !== undefined) {
                                 qualityLabel = newDataFrom.info.quality.toFixed();
@@ -1670,13 +1676,13 @@ var requiredItemOpen = false;
                 if (item.info.quality == undefined) {
                     item.info.quality = 100;
                 }
-                var QualityColor = "rgb(12, 19, 228)";
+                var QualityColor = "rgb(127,82,0)";
                 if (item.info.quality < 25) {
                     QualityColor = "rgb(192, 57, 43)";
                 } else if (item.info.quality > 25 && item.info.quality < 50) {
                     QualityColor = "rgb(230, 126, 34)";
                 } else if (item.info.quality >= 50) {
-                    QualityColor = "rgb(12, 19, 228)";
+                    QualityColor = "rgb(127,82,0)";
                 }
                 if (item.info.quality !== undefined) {
                     qualityLabel = item.info.quality.toFixed();

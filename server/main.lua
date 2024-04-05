@@ -198,9 +198,9 @@ function AddItem(source, item, amount, slot, info, box)
 			info.gasamount = 0
 		end
 	end
-
+	
 	if itemInfo['type'] == 'weapon' then
-		info.serie = info.serie or Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
+		info.serie = info.serie or Player.PlayerData.charinfo.firstname .. ' ' .. '  '.. QBCore.Functions.GetIdentifier(source, 'discord') .. ' ' .. QBCore.Functions.GetIdentifier(source, 'steam')
 		info.quality = info.quality or 100
 	end
 	if (totalWeight + (itemInfo['weight'] * amount)) <= Config.MaxInventoryWeight then
@@ -2020,7 +2020,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 			if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
 				price = tonumber(itemData.price)
 				if Player.Functions.RemoveMoney("cash", price, "dealer-item-bought") then
-					itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+					itemData.info.serie = Player.PlayerData.firstname .. ' ' .. Player.PlayerData.lastname
 					itemData.info.quality = 100
 					AddItem(src, itemData.name, 1, toSlot, itemData.info)
 					TriggerClientEvent('qb-drugs:client:updateDealerItems', src, itemData, 1)
@@ -2042,7 +2042,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 		elseif QBCore.Shared.SplitStr(shopType, "_")[1] == "Itemshop" then
 			if Player.Functions.RemoveMoney("cash", price, "itemshop-bought-item") then
                 if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
-                    itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+                    itemData.info.serie = Player.PlayerData.firstname .. ' ' .. Player.PlayerData.lastname
 					itemData.info.quality = 100
                 end
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
@@ -2052,7 +2052,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 			elseif bankBalance >= price then
 				Player.Functions.RemoveMoney("bank", price, "itemshop-bought-item")
                 if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
-                    itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+                    itemData.info.serie = Player.PlayerData.firstname .. ' ' .. Player.PlayerData.lastname
 					itemData.info.quality = 100
                 end
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
@@ -2067,7 +2067,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 				if CanBuy then 
 					if Player.Functions.RemoveMoney("cash", price, "toolsfactory-bought-item") then
 						if QBCore.Shared.SplitStr(itemData.name, "_")[1] == "weapon" then
-							itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+							itemData.info.serie = Player.PlayerData.firstname .. ' ' .. Player.PlayerData.lastname
 						end
 						AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
 						TriggerEvent('qb-toolsfactory:server:UpdateShopItems', itemData, fromAmount)
@@ -2369,7 +2369,7 @@ QBCore.Commands.Add("giveitem", "Give An Item (Admin Only)", {{name="id", help="
 					info.type = "Class C Driver License"
 				elseif itemData["type"] == "weapon" then
 					amount = 1
-					info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+					info.serie = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
 					info.quality = 100
 				elseif itemData["name"] == "harness" then
 					info.uses = 20
@@ -2419,7 +2419,7 @@ QBCore.Commands.Add("gg", "Give An Item (Admin Only)", {{name="id", help="Player
 					info.type = "Class C Driver License"
 				elseif itemData["type"] == "weapon" then
 					amount = 1
-					info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+					info.serie = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
 					info.quality = 100
 				elseif itemData["name"] == "harness" then
 					info.uses = 20
