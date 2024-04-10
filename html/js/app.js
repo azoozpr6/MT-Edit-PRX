@@ -606,12 +606,27 @@ function generateDescription(itemData) {
         case "wateringcan":
             return `<p><strong>A Watering Can, designed to hold Water ! </strong><span>${itemData.info.durability} Liters Inside.</span></p>`
         case "harness":
-            return `<p>${itemData.info.uses} uses left</p>`;
+                 if (itemData.name == "mechboard") {
+                $(".item-info-title").html("<p>" + itemData.label + "</p>");
+                $(".item-info-description").html(
+                    "<p>" + itemData.info.vehplate + "</p>" +
+                    "<p>" + itemData.info.veh + "</p>"
+                )
+                }
+                else if (itemData.name == "mechboard") {
+                    $(".item-info-title").html("<p>" + itemData.label + "</p>");
+                    $(".item-info-description").html(
+                        "<p>" + itemData.info.vehplate + "</p>" +
+                        "<p>" + itemData.info.veh + "</p>"
+                )}  
         case "ciggypack":
             return `<p><strong>Cigarettes : </strong><span>${itemData.info.uses} Liters Inside.</span></p>`
         case "lockpick":
             return `<p><strong>Remaining uses : </strong><span>${itemData.info.uses}</span></p>
             <p><strong>Type: </strong><span>${itemData.info.tier}</span></p>`
+        case "breaker":
+        return `<p><strong>Remaining uses : </strong><span>${itemData.info.uses}</span></p>
+        <p><strong>Type: </strong><span>${itemData.info.tier}</span></p>`
         case "drill":
             return `<p><strong>Remaining uses : </strong><span>${itemData.info.uses || 2}</span></p>`
         case "hack_device":
@@ -629,7 +644,8 @@ function generateDescription(itemData) {
                 <p><strong>DNA Code: </strong><span>${itemData.info.dnalabel}</span></p>
                 <p><strong>Crime scene: </strong><span>${itemData.info.street}</span></p><br /><p>${itemData.description}</p>`;
             }
-             else if (itemData.name == "key1") {
+            
+            else if (itemData.name == "key1") {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
             $(".item-info-description").html("<p>Room Number: #" + itemData.info.roomnumber + "</p>");
              }

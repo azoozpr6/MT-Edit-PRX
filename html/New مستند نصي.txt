@@ -1,0 +1,88 @@
+ ['beanmachine'] = {
+		label = 'Bean Machine',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['1'] = {
+                name = 'Cofee Maker',
+                payment = 350
+            },
+            ['2'] = {
+                name = 'Boss',
+				isboss = true,
+                payment = 450
+            },
+            ['3'] = {
+                name = 'Owner',
+				isboss = true,
+                isowner = true,
+                payment = 550
+            },
+        },
+	},
+    ['burgershot'] = {
+		label = 'Burger Shot',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['1'] = {
+                name = 'Burger Maker',
+                payment = 350
+            },
+            ['2'] = {
+                name = 'Boss',
+				isboss = true,
+                payment = 450
+            },
+            ['3'] = {
+                name = 'Owner',
+				isboss = true,
+                isowner = true,
+                payment = 550
+            },
+        },
+	},
+    ['uwu'] = {
+		label = 'UwU Coffee',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['1'] = {
+                name = 'UwU Cafe Maker',
+                payment = 350
+            },
+            ['2'] = {
+                name = 'Boss',
+				isboss = true,
+                payment = 450
+            },
+            ['3'] = {
+                name = 'Owner',
+				isboss = true,
+                isowner = true,
+                payment = 550
+            },
+        },
+	},
+    ['coolbeans'] = {
+		label = 'CoolBeans Coffee',
+		defaultDuty = false,
+		offDutyPay = false,
+		grades = {
+            ['1'] = {
+                name = 'CoolBeans Cafe Maker',
+                payment = 350
+            },
+            ['2'] = {
+                name = 'Founder',
+				isboss = true,
+                payment = 450
+            },
+            ['3'] = {
+                name = 'Owner',
+				isboss = true,
+                isowner = true,
+                payment = 550
+            },
+        },
+	},

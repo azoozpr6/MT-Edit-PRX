@@ -185,7 +185,7 @@ function AddItem(source, item, amount, slot, info, box)
 		end
 	elseif itemInfo["name"] == 'breaker' then 
 		if not info.uses then 
-			info.uses = 10
+			info.uses = 20
 		end
 	elseif itemInfo["name"] == 'hacking_device' then 
 		if not info.exp then 
@@ -200,7 +200,7 @@ function AddItem(source, item, amount, slot, info, box)
 	end
 	
 	if itemInfo['type'] == 'weapon' then
-		info.serie = info.serie or Player.PlayerData.charinfo.firstname .. ' ' .. '  '.. QBCore.Functions.GetIdentifier(source, 'discord') .. ' ' .. QBCore.Functions.GetIdentifier(source, 'steam')
+		info.serie = info.serie or tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
 		info.quality = info.quality or 100
 	end
 	if (totalWeight + (itemInfo['weight'] * amount)) <= Config.MaxInventoryWeight then
